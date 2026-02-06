@@ -67,7 +67,7 @@ export interface ResumeData {
 export const resumeData: ResumeData = {
   name: 'افشین افشار',
   title: 'معمار و طراح داخلی',
-  email: 'afshin_afshar10@gmail.com',
+  email: 'a.afshar.design@gmail.com',
   phone: '09123381464',
   summary: 'معمار با بیش از ۲۸ سال تجربه در طراحی پروژه‌های مسکونی و تجاری. متخصص در معماری پایدار و طراحی پارامتریک.',
   experience: [
