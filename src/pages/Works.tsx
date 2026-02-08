@@ -25,7 +25,7 @@ const Works = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-2xl lg:text-5xl font-bold text-foreground mb-4">
               پروژه‌ها
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">

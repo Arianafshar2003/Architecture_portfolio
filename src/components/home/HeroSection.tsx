@@ -19,7 +19,7 @@ export function HeroSection({ onScrollDown }: HeroSectionProps) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative mb-10"
         >
-          <div className="w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-primary/20 shadow-elevated p-2 bg-background/50 backdrop-blur-sm">
+          <div className="w-48 h-48 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-primary/20 shadow-elevated p-2 bg-background/50 backdrop-blur-sm">
             <img
               src={profileImage}
               alt="افشین افشار"
@@ -39,7 +39,7 @@ export function HeroSection({ onScrollDown }: HeroSectionProps) {
             initial={{ opacity: 0, letterSpacing: "-0.05em" }}
             animate={{ opacity: 1, letterSpacing: "0.02em" }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="text-4xl lg:text-4xl font-bold text-foreground mb-4"
+            className="text-2xl lg:text-4xl font-bold text-foreground mb-4"
           >
             افشین افشار
           </motion.h1>

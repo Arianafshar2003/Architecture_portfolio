@@ -67,11 +67,11 @@ const Concepts = () => {
                 <Palette size={32} strokeWidth={1.5} />
               </div>
             </div>
-            <h1 className="text-4xl lg:text-4xl font-black text-slate-900 mb-6 tracking-tighter">
-              کانسپت‌های طراحی
+            <h1 className="text-xl lg:text-4xl font-black text-slate-900 mb-6 tracking-tighter">
+              کانسپت‌های طراحی شده توسط من
             </h1>
             <div className="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8" />
-            <p className="text-slate-500 text-lg lg:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+            <p className="text-slate-500 text-md lg:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
               مجموعه‌ای از ایده‌های اولیه و طرح‌های سه‌بعدی.
             </p>
           </motion.div>

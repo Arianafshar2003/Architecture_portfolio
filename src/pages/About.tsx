@@ -43,7 +43,7 @@ const About = () => {
               transition={{ delay: 0.2 }}
               className="flex-1 text-center lg:text-right"
             >
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h1 className="text-2xl lg:text-5xl font-bold text-foreground mb-4">
                 {resumeData.name}
               </h1>
               <p className="text-xl text-primary font-medium mb-6">
@@ -75,7 +75,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-foreground mb-8">
+              <h2 className="text-2xl font-bold text-foreground mb-8">
                 درباره من
               </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -187,7 +187,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl lg:text-4xl font-black text-slate-900 mb-16 text-center tracking-tighter">
+              <h2 className="text-2xl lg:text-4xl font-black text-slate-900 mb-16 text-center tracking-tighter">
                 مسیر حرفه‌ای
               </h2>
 
@@ -224,7 +224,7 @@ const About = () => {
                         {exp.period}
                       </span>
 
-                      <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-md font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">
                         {exp.title}
                       </h3>
 

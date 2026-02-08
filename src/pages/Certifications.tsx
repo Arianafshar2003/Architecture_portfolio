@@ -2,17 +2,16 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-// اضافه کردن DialogClose به ایمپورت‌ها
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
-import { Briefcase, Award, ListChecks, ZoomIn, X } from "lucide-react"; // اضافه کردن X
+import { Briefcase, Award, ListChecks, ZoomIn, X } from "lucide-react";
 
 // --- ۱. بخش وارد کردن تصاویر (Image Imports) ---
-import certImage from "@/assets/projects/govahi/1.jpg"; // تک تصویر گواهی
+import certImage from "@/assets/projects/govahi/1.jpg";
 
 // تصاویر بخش پروژه‌های کار شده
 import work1 from "@/assets/projects/proj_abadboom/1.JPG";
@@ -77,7 +76,7 @@ const comprehensiveListImages = [
   comp4,
   comp5,
   comp6,
-]; // لیست تصاویر بخش جامع
+];
 
 const Certifications = () => {
   return (
@@ -91,8 +90,8 @@ const Certifications = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              فعالیت در شرکت مهندسان مشاور آبادبوم
+            <h1 className="text-xl lg:text-4xl font-bold text-foreground mb-4">
+              فعالیت من در شرکت مهندسان مشاور آبادبوم
             </h1>
             <p className="text-muted-foreground">
               سوابق حرفه‌ای و کاتالوگ تصویری
@@ -100,16 +99,31 @@ const Certifications = () => {
           </motion.div>
 
           <Tabs defaultValue="projects" className="w-full max-w-6xl mx-auto">
-            <div className="flex justify-center mb-12">
-              <TabsList className="grid w-full max-w-2xl grid-cols-3 h-14 bg-muted/50 p-1 rounded-2xl">
-                <TabsTrigger value="projects" className="rounded-xl gap-2">
-                  <Briefcase size={18} /> پروژه‌های کار شده
+            {/* --- اصلاح بخش تب‌ها برای موبایل --- */}
+            <div className="flex justify-center mb-8 md:mb-12">
+              <TabsList className="flex w-full max-w-2xl h-auto min-h-[3.5rem] bg-muted/50 p-1 rounded-2xl overflow-x-auto no-scrollbar justify-start md:justify-center">
+                <TabsTrigger
+                  value="projects"
+                  className="rounded-xl gap-1.5 md:gap-2 flex-1 min-w-fit px-3 py-2 text-xs md:text-sm whitespace-nowrap"
+                >
+                  <Briefcase className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                  پروژه‌های کار شده
                 </TabsTrigger>
-                <TabsTrigger value="comprehensive" className="rounded-xl gap-2">
-                  <ListChecks size={18} /> لیست جامع کار ها
+
+                <TabsTrigger
+                  value="comprehensive"
+                  className="rounded-xl gap-1.5 md:gap-2 flex-1 min-w-fit px-3 py-2 text-xs md:text-sm whitespace-nowrap"
+                >
+                  <ListChecks className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                  لیست جامع کارها
                 </TabsTrigger>
-                <TabsTrigger value="certificate" className="rounded-xl gap-2">
-                  <Award size={18} /> گواهی
+
+                <TabsTrigger
+                  value="certificate"
+                  className="rounded-xl gap-1.5 md:gap-2 flex-1 min-w-fit px-3 py-2 text-xs md:text-sm whitespace-nowrap"
+                >
+                  <Award className="w-4 h-4 md:w-[18px] md:h-[18px]" />
+                  گواهی
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -124,7 +138,6 @@ const Certifications = () => {
                         <div className="group relative cursor-zoom-in overflow-hidden rounded-2xl shadow-md border border-slate-100 transition-all duration-300 hover:shadow-xl">
                           <img
                             src={src}
-                            // حذف افکت زوم در هاور
                             className="w-full h-auto block object-cover"
                             alt="Project"
                           />
@@ -136,7 +149,6 @@ const Certifications = () => {
                         </div>
                       </DialogTrigger>
 
-                      {/* محتوای مودال اصلاح شده */}
                       <DialogContent className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-none h-full max-h-none translate-x-[-50%] translate-y-[-50%] gap-4 border-none bg-black/95 p-0 shadow-none duration-200 sm:rounded-none md:w-full">
                         <DialogClose className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-colors border border-white/10 cursor-pointer">
                           <X size={32} />
@@ -170,7 +182,6 @@ const Certifications = () => {
                         <div className="group relative cursor-zoom-in overflow-hidden rounded-2xl shadow-card bg-muted transition-all duration-300 hover:shadow-xl border border-slate-100">
                           <img
                             src={src}
-                            // حذف افکت زوم در هاور
                             className="w-full h-auto block object-cover"
                             alt={`Comp item ${index + 1}`}
                           />
@@ -182,7 +193,6 @@ const Certifications = () => {
                         </div>
                       </DialogTrigger>
 
-                      {/* محتوای مودال اصلاح شده */}
                       <DialogContent className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-none h-full max-h-none translate-x-[-50%] translate-y-[-50%] gap-4 border-none bg-black/95 p-0 shadow-none duration-200 sm:rounded-none md:w-full">
                         <DialogClose className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-colors border border-white/10 cursor-pointer">
                           <X size={32} />
@@ -217,7 +227,6 @@ const Certifications = () => {
                         className="w-full h-auto block"
                         alt="Certificate"
                       />
-                      {/* لایه هاور برای گواهی */}
                       <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                         <div className="bg-white/20 p-4 rounded-full backdrop-blur-md border border-white/30 text-white">
                           <ZoomIn size={40} />
@@ -226,7 +235,6 @@ const Certifications = () => {
                     </div>
                   </DialogTrigger>
 
-                  {/* محتوای مودال اصلاح شده */}
                   <DialogContent className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-none h-full max-h-none translate-x-[-50%] translate-y-[-50%] gap-4 border-none bg-black/95 p-0 shadow-none duration-200 sm:rounded-none md:w-full">
                     <DialogClose className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-colors border border-white/10 cursor-pointer">
                       <X size={32} />

@@ -16,13 +16,13 @@ const Resume = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl lg:text-4xl font-black text-slate-900 mb-8 tracking-tighter">
+            <h1 className="text-2xl lg:text-4xl font-black text-slate-900 mb-8 tracking-tighter">
               ارتباط با من
             </h1>
             <div className="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8" />
 
             {/* توضیح کوتاه و متنی */}
-            <p className="text-slate-500 text-lg lg:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
+            <p className="text-slate-500 text-md lg:text-xl font-medium max-w-3xl mx-auto leading-relaxed">
               برای همکاری در زمینه معماری، طراحی داخلی و نظارت بر اجرا، یا جهت
               هماهنگی جلسات حضوری، می‌توانید از طریق ایمیل و شماره تماس زیر
               اقدام نمایید.
@@ -54,7 +54,7 @@ const Resume = () => {
               </p>
               <a
                 href="mailto:a.afshar.design@gmail.com"
-                className="text-lg lg:text-xl font-mono text-slate-800 hover:text-primary transition-colors flex items-center gap-2 border-b-2 border-transparent hover:border-primary pb-1"
+                className="text-md lg:text-xl font-mono text-slate-800 hover:text-primary transition-colors flex items-center gap-2 border-b-2 border-transparent hover:border-primary pb-1"
               >
                 a.afshar.design@gmail.com
                 <ArrowLeft size={18} />
@@ -74,7 +74,7 @@ const Resume = () => {
               </p>
               <a
                 href="tel:+989123381464"
-                className="text-lg lg:text-xl font-mono text-slate-800 hover:text-primary transition-colors flex items-center gap-2 border-b-2 border-transparent hover:border-primary pb-1"
+                className="text-md lg:text-xl font-mono text-slate-800 hover:text-primary transition-colors flex items-center gap-2 border-b-2 border-transparent hover:border-primary pb-1"
                 dir="ltr"
               >
                 0912 338 1464

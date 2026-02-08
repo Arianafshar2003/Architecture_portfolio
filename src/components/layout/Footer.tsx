@@ -94,7 +94,7 @@ export function Footer() {
                     <Mail size={16} strokeWidth={1.5} />
                   </div>
                   {/* فونت بزرگتر شد (text-sm) */}
-                  <span className="text-sm font-mono text-slate-600 group-hover:text-slate-900 transition-colors">
+                  <span className="text-xs font-mono text-slate-600 group-hover:text-slate-900 transition-colors">
                     a.afshar.design@gmail.com
                   </span>
                 </a>
@@ -106,8 +106,8 @@ export function Footer() {
                     <Phone size={16} strokeWidth={1.5} />
                   </div>
                   {/* فونت بزرگتر شد (text-sm) */}
-                  <span className="text-sm font-mono text-slate-600 group-hover:text-slate-900 transition-colors">
-                    0912 338 1464
+                  <span className="text-xs font-mono text-slate-600 group-hover:text-slate-900 transition-colors">
+                    1464 338 0912
                   </span>
                 </a>
               </div>

@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const navLinks = [
   { href: "/", label: "خانه" },
-  { href: "/about", label: "رزومه و درباره من" },
+  { href: "/about", label: "رزومه" },
   { href: "/works", label: "پروژه‌ها" },
   { href: "/certifications", label: "فعالیت مهندسان مشاور" },
   { href: "/concept", label: "کانسپت‌های طراحی" },
@@ -63,7 +63,7 @@ export function Navigation({ customScrolled }: NavigationProps) {
             ${
               isSidebarMode
                 ? "flex-col h-full justify-start gap-12"
-                : "flex-row h-full justify-between items-center" // در حالت افقی justify-between
+                : "flex-row h-full justify-between items-center"
             }
             max-md:flex-row max-md:justify-between max-md:h-full max-md:gap-0
           `}
@@ -96,7 +96,7 @@ export function Navigation({ customScrolled }: NavigationProps) {
               ${
                 isSidebarMode
                   ? "flex-col gap-5 w-full px-6"
-                  : "flex-row justify-evenly flex-grow px-8 lg:px-16" // تغییر کلیدی: justify-evenly برای پخش شدن در کل نوار
+                  : "flex-row justify-evenly flex-grow px-8 lg:px-16"
               }
             `}
           >
@@ -108,7 +108,7 @@ export function Navigation({ customScrolled }: NavigationProps) {
                   ${
                     isSidebarMode
                       ? "text-[16px] lg:text-[18px] tracking-[0.1em] w-full text-right border-b border-slate-100 pb-3 hover:pl-2"
-                      : "text-[16px] lg:text-[17px] tracking-[0.1em]" // فونت حالت افقی بزرگتر شد
+                      : "text-[16px] lg:text-[17px] tracking-[0.1em]"
                   }
                   ${
                     location.pathname === link.href
@@ -152,7 +152,7 @@ export function Navigation({ customScrolled }: NavigationProps) {
         </motion.nav>
       </motion.header>
 
-      {/* منوی موبایل (بدون تغییر) */}
+      {/* منوی موبایل */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -175,8 +175,10 @@ export function Navigation({ customScrolled }: NavigationProps) {
               />
             </div>
 
+            {/* اصلاحات منوی موبایل اینجاست */}
             <nav
-              className="flex flex-col py-12 px-8 gap-8 text-right"
+              // کاهش فاصله عمودی (py-12 -> py-8) و فاصله بین آیتم‌ها (gap-8 -> gap-6)
+              className="flex flex-col py-8 px-8 gap-6 text-right"
               dir="rtl"
             >
               {navLinks.map((link, i) => (
@@ -189,7 +191,8 @@ export function Navigation({ customScrolled }: NavigationProps) {
                   <Link
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-3xl font-black tracking-tighter ${
+                    // تغییر سایز فونت از text-3xl به text-xl
+                    className={`text-xl font-black tracking-tighter ${
                       location.pathname === link.href
                         ? "text-primary"
                         : "text-slate-800"

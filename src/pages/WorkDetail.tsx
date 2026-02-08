@@ -88,11 +88,11 @@ const WorkDetail = () => {
               )}
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-xl lg:text-5xl font-bold text-foreground mb-4">
               {project.title}
             </h1>
 
-            <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+            <p className="text-md text-muted-foreground max-w-3xl leading-relaxed">
               {project.fullDescription}
             </p>
           </motion.div>
@@ -100,7 +100,7 @@ const WorkDetail = () => {
 
         {/* Modern Masonry Gallery */}
         <section className="container mx-auto px-6 mb-16">
-          <h2 className="text-2xl font-bold text-foreground mb-8">
+          <h2 className="text-xl font-bold text-foreground mb-8">
             گالری تصاویر
           </h2>
 
