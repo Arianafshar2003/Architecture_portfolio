@@ -10,7 +10,10 @@ import WorkDetail from "./pages/WorkDetail";
 import Resume from "./pages/Resume";
 import Certifications from "./pages/Certifications";
 import NotFound from "./pages/NotFound";
+import { MobileScrollIndicator } from "@/components/ui/MobileScrollIndicator";
 import Concepts from "./pages/concepts";
+// ۱. ایمپورت کردن کامپوننت جدید
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +23,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* ۲. قرار دادن آن دقیقاً اینجا (داخل BrowserRouter ولی قبل از Routes) */}
+        <ScrollToTop />
+
+        <MobileScrollIndicator />
+
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

@@ -102,21 +102,23 @@ const Concepts = () => {
                     </div>
                   </DialogTrigger>
 
-                  {/* --- اصلاح مهم برای فیت شدن تصاویر عمودی --- */}
-                  <DialogContent className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-none h-full max-h-none translate-x-[-50%] translate-y-[-50%] border-none bg-black/95 p-0 shadow-none duration-200">
+                  {/* FIX: Added dir="ltr" to fix mobile centering bug */}
+                  <DialogContent
+                    dir="ltr"
+                    className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-[100vw] h-full max-h-[100vh] translate-x-[-50%] translate-y-[-50%] border-none bg-black/95 p-0 shadow-none duration-200"
+                  >
                     <DialogClose className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-colors border border-white/10 cursor-pointer">
                       <X size={32} />
                     </DialogClose>
 
                     <div
-                      className="w-full h-full flex items-center justify-center p-4 md:p-8"
+                      className="w-full h-full flex items-center justify-center p-4"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <img
                         src={src}
                         alt="Full size"
-                        // تغییر کلیدی: max-h-[95vh] و object-contain باعث می‌شود تصویر عمودی در صفحه جا شود
-                        className="w-auto h-auto max-w-[95vw] max-h-[95vh] object-contain rounded-sm shadow-2xl"
+                        className="mx-auto w-auto h-auto max-w-full max-h-full object-contain rounded-sm shadow-2xl"
                       />
                     </div>
                   </DialogContent>

@@ -42,7 +42,6 @@ import comp1 from "@/assets/projects/list_abadboom/1.jpg";
 import comp2 from "@/assets/projects/list_abadboom/2.jpg";
 import comp3 from "@/assets/projects/list_abadboom/3.jpg";
 import comp4 from "@/assets/projects/list_abadboom/4.jpg";
-import comp5 from "@/assets/projects/list_abadboom/5.jpg";
 import comp6 from "@/assets/projects/list_abadboom/6.jpg";
 
 const workedProjectsImages = [
@@ -68,15 +67,7 @@ const workedProjectsImages = [
   work20,
   work21,
 ];
-const comprehensiveListImages = [
-  comp0,
-  comp1,
-  comp2,
-  comp3,
-  comp4,
-  comp5,
-  comp6,
-];
+const comprehensiveListImages = [comp0, comp1, comp2, comp3, comp4, comp6];
 
 const Certifications = () => {
   return (

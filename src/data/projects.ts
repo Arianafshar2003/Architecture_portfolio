@@ -111,7 +111,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: 'mozafarian',
-    title: 'مجتمع مسکونی مظفریان-هروی',
+    title: 'مجتمع مسکونی مظفریان - هروی',
     year: 1403,
     location: 'تهران هروی',
     category: 'residential',
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'narcis',
-    title: 'مجتمع تجاری تفریحی نارسیس تهرانپارس',
+    title: 'مجتمع تجاری تفریحی نارسیس - تهرانپارس',
     year: 1392,
     location: 'تهران، تهرانپارس',
     category: 'commercial',
@@ -143,7 +143,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'dubai',
-    title: 'طراحی داخلی واحد مسکونی واقع در Duabi - Marina',
+    title: 'طراحی داخلی واحد مسکونی Duabi - Marina',
     year: 2022,
     location: 'Dubai - Jw Marriot Marina',
     category: 'interior',
@@ -159,7 +159,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'aram',
-    title: 'مجتمع مسکونی آرام',
+    title:  'مجتمع مسکونی آرام - سبلان',
     year: 1400,
     location: 'تهران, سبلان',
     category: 'residential',
@@ -203,7 +203,7 @@ export const projects: Project[] = [
   },
 {
     slug: 'mirdamad',
-    title: 'ساختمان اداری میرداماد',
+    title: 'ساختمان اداری طرفه نگار - میرداماد',
     year: 1403,
     location: 'تهران, پل میرداماد ',
     category: 'Edari',
@@ -220,7 +220,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'sorkhab',
-    title: 'ویلا - کردان - سرخاب',
+    title: 'ویلا کردان - سرخاب',
     year: 1404,
     location: 'کرج, سرخاب  ',
     category: 'villa',

@@ -89,7 +89,7 @@ export function Navigation({ customScrolled }: NavigationProps) {
             />
           </Link>
 
-          {/* ۲. لینک‌ها */}
+          {/* ۲. لینک‌ها (دسکتاپ) */}
           <motion.div
             layout={!isMobile}
             className={`hidden md:flex items-center
@@ -152,35 +152,36 @@ export function Navigation({ customScrolled }: NavigationProps) {
         </motion.nav>
       </motion.header>
 
-      {/* منوی موبایل */}
+      {/* منوی موبایل (تغییر یافته به تم سبز) */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-0 left-0 right-0 bottom-0 z-[110] bg-white/98 backdrop-blur-xl md:hidden"
+            // تغییر پس‌زمینه به bg-primary (سبز)
+            className="fixed top-0 left-0 right-0 bottom-0 z-[110] bg-primary md:hidden"
           >
-            <div className="flex justify-between items-center h-16 px-6 border-b border-slate-100">
+            <div className="flex justify-between items-center h-16 px-6 border-b border-white/10">
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 text-slate-800"
+                // تغییر رنگ آیکون بستن به سفید
+                className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
               >
                 <X size={32} />
               </button>
-              <img
-                src={logoPng}
-                alt="Logo"
-                className="h-10 w-auto object-contain"
-              />
+
+              {/* اضافه کردن پس‌زمینه سفید کوچک به لوگو برای دیده شدن روی سبز */}
+              <div className="bg-white p-1 rounded-md">
+                <img
+                  src={logoPng}
+                  alt="Logo"
+                  className="h-8 w-auto object-contain"
+                />
+              </div>
             </div>
 
-            {/* اصلاحات منوی موبایل اینجاست */}
-            <nav
-              // کاهش فاصله عمودی (py-12 -> py-8) و فاصله بین آیتم‌ها (gap-8 -> gap-6)
-              className="flex flex-col py-8 px-8 gap-6 text-right"
-              dir="rtl"
-            >
+            <nav className="flex flex-col py-8 px-8 gap-6 text-right" dir="rtl">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
@@ -191,11 +192,11 @@ export function Navigation({ customScrolled }: NavigationProps) {
                   <Link
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    // تغییر سایز فونت از text-3xl به text-xl
-                    className={`text-xl font-black tracking-tighter ${
+                    // تغییر رنگ متن‌ها به سفید
+                    className={`text-xl font-black tracking-tighter transition-colors ${
                       location.pathname === link.href
-                        ? "text-primary"
-                        : "text-slate-800"
+                        ? "text-white" // لینک فعال: سفید کامل
+                        : "text-white/70 hover:text-white" // لینک غیرفعال: سفید شفاف
                     }`}
                   >
                     {link.label}

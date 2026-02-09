@@ -9,12 +9,11 @@ import {
   MapPin,
   Calendar,
   Maximize2,
-  ZoomIn, // اضافه شده
-  X, // اضافه شده
+  ZoomIn,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
-// اضافه کردن DialogClose به ایمپورت‌ها
 import {
   Dialog,
   DialogContent,
@@ -50,7 +49,7 @@ const WorkDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-right" dir="rtl">
       <Navigation />
 
       <main className="pt-24 pb-16">
@@ -120,11 +119,9 @@ const WorkDetail = () => {
                       <img
                         src={image}
                         alt={`${project.title} - ${index + 1}`}
-                        // حذف افکت زوم روی خود عکس در حالت هاور برای جلوگیری از بهم ریختگی
                         className="w-full h-auto block object-cover"
                       />
 
-                      {/* لایه هاور با آیکون ذره‌بین */}
                       <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
                         <div className="bg-white/20 p-4 rounded-full backdrop-blur-md border border-white/30 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                           <ZoomIn size={28} />
@@ -133,21 +130,23 @@ const WorkDetail = () => {
                     </div>
                   </DialogTrigger>
 
-                  {/* محتوای مودال: تمام صفحه، پس‌زمینه تیره و دکمه بستن */}
-                  <DialogContent className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-none h-full max-h-none translate-x-[-50%] translate-y-[-50%] gap-4 border-none bg-black/95 p-0 shadow-none duration-200 sm:rounded-none md:w-full">
-                    {/* دکمه بستن */}
+                  {/* FIX: Added dir="ltr" to fix mobile centering bug */}
+                  <DialogContent
+                    dir="ltr"
+                    className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-[100vw] h-full max-h-[100vh] translate-x-[-50%] translate-y-[-50%] gap-0 border-none bg-black/95 p-0 shadow-none duration-200"
+                  >
                     <DialogClose className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-colors border border-white/10 cursor-pointer">
                       <X size={32} />
                       <span className="sr-only">بستن</span>
                     </DialogClose>
 
                     <div
-                      className="w-full h-full flex items-center justify-center p-4 md:p-8"
+                      className="w-full h-full flex items-center justify-center p-4"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <img
                         src={image}
-                        className="w-auto h-auto max-w-[95vw] max-h-[95vh] object-contain rounded-sm shadow-2xl"
+                        className="mx-auto w-auto h-auto max-w-full max-h-full object-contain rounded-sm shadow-2xl"
                         alt="Full view"
                       />
                     </div>
