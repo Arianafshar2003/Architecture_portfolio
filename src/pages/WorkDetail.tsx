@@ -91,7 +91,8 @@ const WorkDetail = () => {
               {project.title}
             </h1>
 
-            <p className="text-md text-muted-foreground max-w-3xl leading-relaxed">
+            {/* تغییر این قسمت: اضافه کردن کلاس text-justify */}
+            <p className="text-md text-muted-foreground max-w-3xl leading-relaxed text-justify">
               {project.fullDescription}
             </p>
           </motion.div>
@@ -130,7 +131,6 @@ const WorkDetail = () => {
                     </div>
                   </DialogTrigger>
 
-                  {/* FIX: Added dir="ltr" to fix mobile centering bug */}
                   <DialogContent
                     dir="ltr"
                     className="fixed left-[50%] top-[50%] z-[200] grid w-full max-w-[100vw] h-full max-h-[100vh] translate-x-[-50%] translate-y-[-50%] gap-0 border-none bg-black/95 p-0 shadow-none duration-200"
