@@ -42,12 +42,12 @@ export function HeroSection({ onScrollDown }: HeroSectionProps) {
 
           {/* عنوان شغلی (رنگ اصلی/سرمه‌ای) */}
           <h2 className="text-xl lg:text-3xl text-primary font-bold">
-            مهندس معمار
+            آرشیتکت
           </h2>
 
           {/* سابقه کار */}
           <p className="text-xl lg:text-2xl text-slate-800 font-bold mt-2">
-            +۲۸ سال سابقه درخشان حرفه‌ای
+            ۲۸+ سال سابقه حرفه‌ای
           </p>
 
           {/* خدمات */}
