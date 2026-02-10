@@ -36,13 +36,13 @@ export function HeroSection({ onScrollDown }: HeroSectionProps) {
           className="max-w-4xl flex flex-col items-center gap-3 lg:gap-5" // فاصله بین خطوط
         >
           {/* نام */}
-          <h1 className="text-2xl lg:text-4xl font-black text-slate-900 tracking-tight">
-            افشین افشار
+          <h1 className="text-2xl lg:text-3xl font-black text-slate-900 tracking-tight">
+            AFSHIN AFSHAR
           </h1>
 
           {/* عنوان شغلی (رنگ اصلی/سرمه‌ای) */}
-          <h2 className="text-xl lg:text-3xl text-primary font-bold">
-            آرشیتکت
+          <h2 className="text-xl lg:text-xl text-primary font-bold">
+            ARCHITECT
           </h2>
 
           {/* سابقه کار */}
